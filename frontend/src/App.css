@@ -1,0 +1,279 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --danger: #dc2626;
+  --success: #16a34a;
+  --bg: #f1f5f9;
+  --white: #ffffff;
+  --border: #e2e8f0;
+  --text: #1e293b;
+  --muted: #64748b;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* Auth pages */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.auth-box {
+  background: var(--white);
+  padding: 40px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-box h2 {
+  margin-bottom: 24px;
+  text-align: center;
+  color: var(--primary);
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: var(--primary);
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.btn:hover {
+  background: var(--primary-dark);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.auth-link {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.auth-link a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.error-msg {
+  color: var(--danger);
+  font-size: 13px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+/* Navbar */
+.navbar {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .brand {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.navbar nav a {
+  text-decoration: none;
+  color: var(--text);
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+.navbar nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .logout-btn {
+  background: none;
+  border: 1px solid var(--border);
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.navbar .logout-btn:hover {
+  color: var(--danger);
+  border-color: var(--danger);
+}
+
+/* Page wrapper */
+.page {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.page h2 {
+  margin-bottom: 20px;
+}
+
+/* Card */
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+/* Score display */
+.score-display {
+  text-align: center;
+  padding: 20px;
+}
+
+.score-number {
+  font-size: 64px;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.score-rating {
+  font-size: 22px;
+  margin-top: 6px;
+}
+
+.rating-Excellent { color: #16a34a; }
+.rating-Good { color: #2563eb; }
+.rating-Fair { color: #d97706; }
+.rating-Poor { color: #dc2626; }
+.rating-Very.Poor { color: #7f1d1d; }
+
+/* Form inside card */
+.score-form .form-group input {
+  width: 100%;
+}
+
+/* Rankings table */
+.rankings-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.rankings-table th,
+.rankings-table td {
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+.rankings-table th {
+  background: var(--bg);
+  font-weight: bold;
+}
+
+.rankings-table tr:hover {
+  background: #f8fafc;
+}
+
+/* Filter row */
+.filter-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.filter-row select {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.filter-row button {
+  padding: 8px 16px;
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.filter-row button:hover {
+  background: var(--primary-dark);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .auth-box {
+    padding: 24px 16px;
+  }
+
+  .score-number {
+    font-size: 48px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .rankings-table {
+    font-size: 12px;
+  }
+
+  .rankings-table th,
+  .rankings-table td {
+    padding: 8px 8px;
+  }
+}

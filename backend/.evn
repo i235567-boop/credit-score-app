@@ -1,0 +1,3 @@
+MONGO_URI=mongodb+srv://admin:changepassword99@mycluster.ladmdsa.mongodb.net/?retryWrites=true&w=majority&appName=MyCluster
+JWT_SECRET=mysupersecretkey123
+PORT=5000
